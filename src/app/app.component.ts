@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'exerciciosAngular';
+
+  titulo = "Lista 1";
+  newTitle = "";
+
+  salvar() {
+    this.titulo = this.newTitle;
+  }
+
+  limpar() {
+    this.newTitle = "";
+  }
 }

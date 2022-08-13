@@ -1,0 +1,41 @@
+<div class="container login-container mt-5 p-0 shadow-lg">
+    <form class="row g-3 align-items-center m-5" action="_blank">
+        <h2>Login</h2>
+        <div class="col-12">
+            <label for="idInputEmail" class="form-label">Email address</label>
+            <input type="text" class="form-control" id="idInputEmail" [value]="email" (input) = "email = inputEmail.value" #inputEmail aria-describedby="emailHelp">
+        </div>
+
+        <div class="col-12">
+            <div class="row justify-content-between">
+                <label for="idInputPassword" class="form-label col-auto">Password</label>
+                <a href="#" class="col-auto">Forgot Password?</a>
+            </div>
+            <input type="password" class="form-control" id="idInputPassword" [value]="password" (input) = "password = inputPassword.value" #inputPassword aria-describedby="emailHelp">
+        </div>
+        <div class="col-12">
+            <p [class]="msnStyle">{{ msn }}</p> <!-- Caixa de alerta do login -->
+        </div>
+        <div class="col-12">
+            <div class="row justify-content-between">
+                <div class="col-auto form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Remember me
+                    </label>
+                </div>
+
+                <div class="col-auto">
+                    <input type="button" class="btn btn-primary" (click)="login()" value="Login">
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+
+    <div class="bg-light text-center p-3">
+        Don't have an account? <a href="#" class="text-dark">Create One</a>
+    </div>
+</div>
+<div class="text-center mt-5 text-muted">Copyright © 2017-2021 -- Your Company</div>
